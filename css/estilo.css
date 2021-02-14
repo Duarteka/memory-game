@@ -1,0 +1,43 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	min-height:100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.mesa{
+	width:700px;
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+.carta{
+	display:block;
+	width:150px;
+	margin-top:20px;
+	background-color:#333;
+	border-radius:10px;
+	transform: rotateY(180deg);
+	transition: transform 0.5s;
+}
+.carta img{
+	display:block;
+	width:100%;
+	border-radius:10px;
+	opacity:0;
+	transition:opacity 0.4s;
+}
+.visible{
+	transform: rotateY(0);
+	pointer-events: none;
+}
+.visible img{
+	opacity: 1;
+}
+.invisible{
+	opacity:0;
+	pointer-events: none;
+}
